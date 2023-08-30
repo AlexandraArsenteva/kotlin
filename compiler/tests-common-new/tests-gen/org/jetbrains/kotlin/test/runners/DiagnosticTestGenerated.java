@@ -38257,6 +38257,12 @@ public class DiagnosticTestGenerated extends AbstractDiagnosticTest {
             }
 
             @Test
+            @TestMetadata("nonExhaustiveWhenExpression.kt")
+            public void testNonExhaustiveWhenExpression() throws Exception {
+                runTest("compiler/testData/diagnostics/tests/when/nonExhaustiveWhenExpression.kt");
+            }
+
+            @Test
             @TestMetadata("nonExhaustiveWhenStatement_1_5.kt")
             public void testNonExhaustiveWhenStatement_1_5() throws Exception {
                 runTest("compiler/testData/diagnostics/tests/when/nonExhaustiveWhenStatement_1_5.kt");
