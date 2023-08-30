@@ -21,3 +21,16 @@ fun foo(arg: X?): Int {
         return 0
     }
 }
+
+//check as a statement
+fun bar(arg: X?): Int {
+    var x = 0
+    if (arg != null) {
+        <!NO_ELSE_IN_WHEN!>when<!> (<!DEBUG_INFO_SMARTCAST!>arg<!>) {
+            X.B -> x = 2
+        }
+        return x
+    } else {
+        return 0
+    }
+}

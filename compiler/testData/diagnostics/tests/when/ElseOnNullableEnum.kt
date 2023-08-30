@@ -23,6 +23,11 @@ fun withNull(e: E?) = when (e) {
     null -> null
 }
 
+fun withElse(e: E?) = when (e) {
+    E.A -> 3
+    else -> null
+}
+
 fun nullableNothing(): Nothing? = null
 fun withNullableNothing(e: E?) = when (e) {
     E.A -> 5

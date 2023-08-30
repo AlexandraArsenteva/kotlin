@@ -36235,6 +36235,12 @@ public class FirPsiOldFrontendDiagnosticsTestGenerated extends AbstractFirPsiDia
             }
 
             @Test
+            @TestMetadata("CommaInWhenCondition.kt")
+            public void testCommaInWhenCondition() throws Exception {
+                runTest("compiler/testData/diagnostics/tests/when/CommaInWhenCondition.kt");
+            }
+
+            @Test
             @TestMetadata("CommaInWhenConditionWithoutArgument.kt")
             public void testCommaInWhenConditionWithoutArgument() throws Exception {
                 runTest("compiler/testData/diagnostics/tests/when/CommaInWhenConditionWithoutArgument.kt");
@@ -36409,6 +36415,12 @@ public class FirPsiOldFrontendDiagnosticsTestGenerated extends AbstractFirPsiDia
             }
 
             @Test
+            @TestMetadata("ExhaustiveSealed.kt")
+            public void testExhaustiveSealed() throws Exception {
+                runTest("compiler/testData/diagnostics/tests/when/ExhaustiveSealed.kt");
+            }
+
+            @Test
             @TestMetadata("ExhaustiveValOverConditionalInit.kt")
             public void testExhaustiveValOverConditionalInit() throws Exception {
                 runTest("compiler/testData/diagnostics/tests/when/ExhaustiveValOverConditionalInit.kt");
@@ -36448,6 +36460,12 @@ public class FirPsiOldFrontendDiagnosticsTestGenerated extends AbstractFirPsiDia
             @TestMetadata("ExhaustiveWithNullabilityCheckElse.kt")
             public void testExhaustiveWithNullabilityCheckElse() throws Exception {
                 runTest("compiler/testData/diagnostics/tests/when/ExhaustiveWithNullabilityCheckElse.kt");
+            }
+
+            @Test
+            @TestMetadata("ExhaustiveWithNullabilityCheckSealed.kt")
+            public void testExhaustiveWithNullabilityCheckSealed() throws Exception {
+                runTest("compiler/testData/diagnostics/tests/when/ExhaustiveWithNullabilityCheckSealed.kt");
             }
 
             @Test
@@ -36625,6 +36643,12 @@ public class FirPsiOldFrontendDiagnosticsTestGenerated extends AbstractFirPsiDia
             }
 
             @Test
+            @TestMetadata("nonExhaustiveWhenExpression.kt")
+            public void testNonExhaustiveWhenExpression() throws Exception {
+                runTest("compiler/testData/diagnostics/tests/when/nonExhaustiveWhenExpression.kt");
+            }
+
+            @Test
             @TestMetadata("nonExhaustiveWhenStatement_1_5.kt")
             public void testNonExhaustiveWhenStatement_1_5() throws Exception {
                 runTest("compiler/testData/diagnostics/tests/when/nonExhaustiveWhenStatement_1_5.kt");
@@ -36646,6 +36670,12 @@ public class FirPsiOldFrontendDiagnosticsTestGenerated extends AbstractFirPsiDia
             @TestMetadata("NonExhaustiveWithNullabilityCheck.kt")
             public void testNonExhaustiveWithNullabilityCheck() throws Exception {
                 runTest("compiler/testData/diagnostics/tests/when/NonExhaustiveWithNullabilityCheck.kt");
+            }
+
+            @Test
+            @TestMetadata("NonExhaustiveWithNullabilityCheckBoolean.kt")
+            public void testNonExhaustiveWithNullabilityCheckBoolean() throws Exception {
+                runTest("compiler/testData/diagnostics/tests/when/NonExhaustiveWithNullabilityCheckBoolean.kt");
             }
 
             @Test
@@ -36778,6 +36808,12 @@ public class FirPsiOldFrontendDiagnosticsTestGenerated extends AbstractFirPsiDia
                 }
 
                 @Test
+                @TestMetadata("shadowingWithClassProperty.kt")
+                public void testShadowingWithClassProperty() throws Exception {
+                    runTest("compiler/testData/diagnostics/tests/when/withSubjectVariable/shadowingWithClassProperty.kt");
+                }
+
+                @Test
                 @TestMetadata("smartCastOnValueBoundToSubjectVariable.kt")
                 public void testSmartCastOnValueBoundToSubjectVariable() throws Exception {
                     runTest("compiler/testData/diagnostics/tests/when/withSubjectVariable/smartCastOnValueBoundToSubjectVariable.kt");
@@ -36814,6 +36850,12 @@ public class FirPsiOldFrontendDiagnosticsTestGenerated extends AbstractFirPsiDia
                 }
 
                 @Test
+                @TestMetadata("subjectVariableIsValueFromCondition.kt")
+                public void testSubjectVariableIsValueFromCondition() throws Exception {
+                    runTest("compiler/testData/diagnostics/tests/when/withSubjectVariable/subjectVariableIsValueFromCondition.kt");
+                }
+
+                @Test
                 @TestMetadata("unsupportedFeature.kt")
                 public void testUnsupportedFeature() throws Exception {
                     runTest("compiler/testData/diagnostics/tests/when/withSubjectVariable/unsupportedFeature.kt");
@@ -36829,6 +36871,12 @@ public class FirPsiOldFrontendDiagnosticsTestGenerated extends AbstractFirPsiDia
                 @TestMetadata("unusedWhenSubjectVariable.kt")
                 public void testUnusedWhenSubjectVariable() throws Exception {
                     runTest("compiler/testData/diagnostics/tests/when/withSubjectVariable/unusedWhenSubjectVariable.kt");
+                }
+
+                @Test
+                @TestMetadata("whenWithMultipleLinesWithoutBrackets.kt")
+                public void testWhenWithMultipleLinesWithoutBrackets() throws Exception {
+                    runTest("compiler/testData/diagnostics/tests/when/withSubjectVariable/whenWithMultipleLinesWithoutBrackets.kt");
                 }
             }
         }

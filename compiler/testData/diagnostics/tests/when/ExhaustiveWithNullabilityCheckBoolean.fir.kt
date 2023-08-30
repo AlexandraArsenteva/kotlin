@@ -22,3 +22,19 @@ fun foo(arg: Boolean?): Int {
         return -1
     }
 }
+
+//check for statements
+fun bar(arg: Boolean?): Int {
+    var x = 1
+    if (arg != null) {
+        when (arg) {
+            true -> x = 1
+            false -> x = 0
+            // else or null branch should not be required here!
+        }
+        return x
+    }
+    else {
+        return -1
+    }
+}

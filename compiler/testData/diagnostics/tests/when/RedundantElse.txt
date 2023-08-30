@@ -2,10 +2,16 @@ package
 
 public fun bar(/*0*/ e: E?): kotlin.String
 public fun bar(/*0*/ x: X?): kotlin.String
+public fun bar(/*0*/ b: kotlin.Boolean?): kotlin.String
+public fun barWithNull(/*0*/ e: E?): kotlin.String
+public fun barWithNull(/*0*/ x: X?): kotlin.String
+public fun barWithNull(/*0*/ b: kotlin.Boolean?): kotlin.String
 public fun foo(/*0*/ e: E): kotlin.String
 public fun foo(/*0*/ x: X): kotlin.Unit
 public fun foo(/*0*/ b: kotlin.Boolean): kotlin.Int
+public fun justUse(/*0*/ e: E): kotlin.Unit
 public fun justUse(/*0*/ x: X): kotlin.Unit
+public fun justUse(/*0*/ b: kotlin.Boolean): kotlin.Unit
 public fun useJava(): kotlin.String
 
 public final enum class E : kotlin.Enum<E> {

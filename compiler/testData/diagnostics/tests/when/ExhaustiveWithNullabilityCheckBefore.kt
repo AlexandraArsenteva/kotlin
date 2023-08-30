@@ -21,3 +21,16 @@ fun foo(arg: X?): Int {
         // else or null branch should not be required here!
     }
 }
+
+//check as a statement
+fun bar(arg: X?): Int {
+    if (arg == null) {
+        return 0
+    }
+    when (<!DEBUG_INFO_SMARTCAST!>arg<!>) {
+        X.A -> 1
+        X.B -> 2
+        // else or null branch should not be required here!
+    }
+    return 1
+}

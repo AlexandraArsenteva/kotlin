@@ -1,6 +1,11 @@
 package
 
+public fun bar(/*0*/ s: S): kotlin.Int
 public fun foo(/*0*/ s: S): kotlin.Unit
+public fun test1(/*0*/ s: S?): kotlin.Int
+public fun test2(/*0*/ s: S?): kotlin.Int
+public fun test3(/*0*/ s: S?): kotlin.Int
+public fun test4(/*0*/ s: S?): kotlin.Int
 public fun use(/*0*/ s: kotlin.String): kotlin.String
 
 public final class Derived : S {

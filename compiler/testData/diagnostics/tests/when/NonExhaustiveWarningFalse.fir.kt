@@ -22,3 +22,13 @@ fun foo(arg: X): String {
     }
     return res
 }
+
+//check as an expression
+fun bar(arg: X): String {
+    return when (arg) {
+        X.A -> "A"
+        X.B -> "B"
+        X.C -> "C"
+        X.D -> "D"
+    }
+}
