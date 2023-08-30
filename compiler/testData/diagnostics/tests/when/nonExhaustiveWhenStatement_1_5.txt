@@ -14,6 +14,8 @@ public fun test_3(/*0*/ x: IBase): kotlin.Unit
 public fun test_4(/*0*/ x: kotlin.Boolean): kotlin.Unit
 public fun test_4_1(/*0*/ x: kotlin.Boolean): kotlin.String
 public fun test_5(/*0*/ x: SomeEnum?): kotlin.Unit
+public fun test_5_1(/*0*/ x: SomeEnum?): kotlin.String
+public fun test_5_2(/*0*/ x: SomeEnum?): kotlin.String
 public fun test_6(/*0*/ x: Base?): kotlin.Unit
 public fun test_7(/*0*/ x: IBase?): kotlin.Unit
 public fun test_8(/*0*/ x: kotlin.Boolean?): kotlin.Unit

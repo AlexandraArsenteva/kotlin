@@ -61,6 +61,21 @@ fun test_5(x: SomeEnum?) {
     }
 }
 
+fun test_5_1(x: SomeEnum?): String {
+    return <!NO_ELSE_IN_WHEN!>when<!> (x) {
+        SomeEnum.A -> ""
+        SomeEnum.B -> ""
+    }
+}
+
+fun test_5_2(x: SomeEnum?): String {
+    return when (x) {
+        SomeEnum.A -> ""
+        SomeEnum.B -> ""
+        null -> ""
+    }
+}
+
 fun test_6(x: Base?) {
     <!NON_EXHAUSTIVE_WHEN_STATEMENT!>when<!> (x) {
         is Base.A -> ""
