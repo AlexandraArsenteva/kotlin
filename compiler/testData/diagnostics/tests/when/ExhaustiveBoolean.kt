@@ -12,8 +12,28 @@
 // See also: KT-3743
 fun foo(arg: Boolean): String {
     // Must be exhaustive
-    return when(arg) {
+    return when (arg) {
         true -> "truth"
         false -> "falsehood"
     }
+}
+
+//check for statements
+fun bar(arg: Boolean) {
+    when (arg) {
+        true -> "truth"
+        false -> "falsehood"
+    }
+}
+
+fun bar1(arg: Boolean) {
+    when (arg) {
+        true -> "truth"
+        else -> "falsehood"
+    }
+}
+
+fun bar2(arg: Boolean) = when (arg) {
+    true -> "truth"
+    else -> "falsehood"
 }

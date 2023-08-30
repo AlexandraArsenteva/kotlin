@@ -40,6 +40,13 @@ fun test_4(x: Boolean) {
     }
 }
 
+fun test_4_1(x: Boolean): String {
+    return <!NO_ELSE_IN_WHEN!>when<!> (x) {
+        true -> ""
+    }
+}
+
+
 // ------------------ nullable ------------------
 
 fun test_5(x: SomeEnum?) {
@@ -89,6 +96,13 @@ fun test_8(x: Boolean?) {
     }
 }
 
+fun test_8_1(x: Boolean?): String {
+    return <!NO_ELSE_IN_WHEN!>when<!> (x) {
+        true -> ""
+        null -> ""
+    }
+}
+
 // ------------------ with else ------------------
 
 fun test_9(x: SomeEnum?) {
@@ -114,6 +128,13 @@ fun test_11(x: IBase?) {
 
 fun test_12(x: Boolean?) {
     when (x) {
+        true -> ""
+        else -> ""
+    }
+}
+
+fun test_12_1(x: Boolean?): String {
+    return when (x) {
         true -> ""
         else -> ""
     }

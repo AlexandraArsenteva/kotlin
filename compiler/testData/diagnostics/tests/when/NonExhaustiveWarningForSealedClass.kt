@@ -28,3 +28,43 @@ fun foo(s: S) {
         is Derived -> use(<!DEBUG_INFO_SMARTCAST!>s<!>.s)
     }
 }
+
+fun bar(s: S): Int {
+    return <!NO_ELSE_IN_WHEN!>when<!> (s) {
+        First -> 1
+        is Derived -> 2
+    }
+}
+
+fun test1(s: S?) : Int {
+    if (s == null) {
+        return 0
+    }
+    <!NO_ELSE_IN_WHEN!>when<!> (<!DEBUG_INFO_SMARTCAST!>s<!>) {
+        First -> 1
+    }
+    return 1
+}
+
+fun test2(s: S?): Int {
+    if (s == null) {
+        return 0
+    }
+    return <!NO_ELSE_IN_WHEN!>when<!> (<!DEBUG_INFO_SMARTCAST!>s<!>) {
+        First -> 1
+    }
+}
+
+fun test3(s: S?) : Int {
+    return <!NO_ELSE_IN_WHEN!>when<!> (s) {
+        First -> 1
+        is Derived -> 2
+    }
+}
+
+fun test4(s: S?) : Int {
+    return <!NO_ELSE_IN_WHEN!>when<!> (s) {
+        First -> 1
+        null -> 2
+    }
+}

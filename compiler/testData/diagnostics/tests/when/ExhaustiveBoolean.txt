@@ -1,3 +1,6 @@
 package
 
+public fun bar(/*0*/ arg: kotlin.Boolean): kotlin.Unit
+public fun bar1(/*0*/ arg: kotlin.Boolean): kotlin.Unit
+public fun bar2(/*0*/ arg: kotlin.Boolean): kotlin.String
 public fun foo(/*0*/ arg: kotlin.Boolean): kotlin.String

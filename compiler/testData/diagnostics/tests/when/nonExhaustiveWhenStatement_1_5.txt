@@ -4,6 +4,7 @@ public fun test_1(/*0*/ x: SomeEnum): kotlin.Unit
 public fun test_10(/*0*/ x: Base?): kotlin.Unit
 public fun test_11(/*0*/ x: IBase?): kotlin.Unit
 public fun test_12(/*0*/ x: kotlin.Boolean?): kotlin.Unit
+public fun test_12_1(/*0*/ x: kotlin.Boolean?): kotlin.String
 public fun test_13(/*0*/ x: SomeEnum?): kotlin.Unit
 public fun test_14(/*0*/ x: Base?): kotlin.Unit
 public fun test_15(/*0*/ x: IBase?): kotlin.Unit
@@ -11,10 +12,12 @@ public fun test_16(/*0*/ x: kotlin.Boolean?): kotlin.Unit
 public fun test_2(/*0*/ x: Base): kotlin.Unit
 public fun test_3(/*0*/ x: IBase): kotlin.Unit
 public fun test_4(/*0*/ x: kotlin.Boolean): kotlin.Unit
+public fun test_4_1(/*0*/ x: kotlin.Boolean): kotlin.String
 public fun test_5(/*0*/ x: SomeEnum?): kotlin.Unit
 public fun test_6(/*0*/ x: Base?): kotlin.Unit
 public fun test_7(/*0*/ x: IBase?): kotlin.Unit
 public fun test_8(/*0*/ x: kotlin.Boolean?): kotlin.Unit
+public fun test_8_1(/*0*/ x: kotlin.Boolean?): kotlin.String
 public fun test_9(/*0*/ x: SomeEnum?): kotlin.Unit
 
 public sealed class Base {

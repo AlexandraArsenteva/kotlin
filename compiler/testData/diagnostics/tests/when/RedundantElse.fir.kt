@@ -33,11 +33,17 @@ fun foo(x: X) = when (x) {
     else -> {}
 }
 
-fun bar(x: X?): String = when (x) {
+fun barWithNull(x: X?): String = when (x) {
     is X.A -> "A"
     is X.B -> "B"
     null -> "null"
     else -> "Unreachable"
+}
+
+fun bar(x: X?): String = when (x) {
+    is X.A -> "A"
+    is X.B -> "B"
+    else -> "" // no warning
 }
 
 fun justUse(x: X) {
@@ -65,10 +71,48 @@ fun bar(e: E?): String = when (e) {
     else -> "" // no warning
 }
 
+fun barWithNull(e: E?): String = when (e) {
+    E.A -> "A"
+    E.B -> "B"
+    null -> ""
+    else -> ""
+}
+
+fun justUse(e: E) {
+    when (e) {
+        E.A -> "A"
+        E.B -> "B"
+        // Redundant even in statement position
+        else -> {}
+    }
+}
+
 fun foo(b: Boolean) = when (b) {
     true -> 1
     false -> 0
     else -> -1
+}
+
+fun justUse(b: Boolean) {
+    when (b) {
+        true -> 1
+        false -> 0
+        // Redundant even in statement position
+        else -> -1
+    }
+}
+
+fun barWithNull(b: Boolean?) = when (b) {
+    true -> "1"
+    false -> "2"
+    null -> "3"
+    else -> "0"
+}
+
+fun bar(b: Boolean?): String = when (b) {
+    true -> "1"
+    false -> "0"
+    else -> "" // no warning
 }
 
 fun useJava(): String {
